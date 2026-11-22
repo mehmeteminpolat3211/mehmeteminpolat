@@ -48,6 +48,21 @@ app.use(express.static(path.join(__dirname, "../"), {
     index: "index.html"
 }));
 
+
+// ÖZEL KLASÖRLERİ DIŞARIYA KAPAT
+app.use((req, res, next) => {
+    const blocked = ["/server", "/data", "/node_modules"];
+
+    if (blocked.some(folder =>
+        req.path === folder || req.path.startsWith(folder + "/")
+    )) {
+        return res.sendStatus(404);
+    }
+
+    next();
+});
+
+
 // İLETİŞİM SINIRLANDIRMASI
 const contactLimiter = rateLimit({
     windowMs: 15 * 60 * 1000,
@@ -160,6 +175,6 @@ app.get("/api/health", (req, res) => {
 });
 
 // SUNUCUYU BAŞLAT
-app.listen(PORT, () => {
-    console.log(`Web sitesi: http://localhost:${PORT}`);
+app.listen(PORT, "0.0.0.0", () => {
+    console.log(`Web sitesi aktif: ${PORT}`);
 });
