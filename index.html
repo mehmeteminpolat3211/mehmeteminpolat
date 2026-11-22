@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mehmet Emin Polat resmi kişisel web sitesi.">
+    <meta name="author" content="Mehmet Emin Polat">
+    <meta name="theme-color" content="#080b14">
+    <title>Mehmet Emin Polat | Resmi Web Sitesi</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="header">
+    <a href="index.html" class="logo">MEP<span>.</span></a>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Menüyü aç">
+        ☰
+    </button>
+
+    <nav class="nav" id="navigation">
+        <a href="index.html" class="active">Ana Sayfa</a>
+        <a href="hakkimda.html">Hakkımda</a>
+        <a href="youtube.html">YouTube</a>
+        <a href="iletisim.html">İletişim</a>
+    </nav>
+</header>
+
+<main>
+    <section class="hero">
+        <div class="hero-content">
+            <span class="welcome">RESMİ KİŞİSEL WEB SİTEM</span>
+
+            <h1>MERHABA,<br>BEN <span>MEHMET EMİN POLAT</span></h1>
+
+            <p>
+                Kişisel dünyama hoş geldin.
+                Çalışmalarımı, videolarımı ve hakkımdaki bilgileri
+                bu web sitesinden takip edebilirsin.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="hakkimda.html" class="btn primary">Beni Tanı</a>
+                <a href="iletisim.html" class="btn secondary">İletişime Geç</a>
+            </div>
+        </div>
+
+        <div class="hero-image">
+            <div class="image-frame">
+                <img src="assets/images/profil.jpg"
+                     alt="Mehmet Emin Polat"
+                     onerror="this.style.display='none'">
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <span class="welcome">KEŞFET</span>
+        <h2>Web Siteme Hoş Geldin</h2>
+
+        <div class="cards">
+            <a href="hakkimda.html" class="card">
+                <div class="card-icon">👤</div>
+                <h3>Hakkımda</h3>
+                <p>Beni daha yakından tanı.</p>
+            </a>
+
+            <a href="youtube.html" class="card">
+                <div class="card-icon">▶</div>
+                <h3>YouTube</h3>
+                <p>Videolarımı keşfet.</p>
+            </a>
+
+            <a href="iletisim.html" class="card">
+                <div class="card-icon">✉</div>
+                <h3>İletişim</h3>
+                <p>Benimle iletişime geç.</p>
+            </a>
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    <p>© <span id="year"></span> Mehmet Emin Polat. Tüm hakları saklıdır.</p>
+</footer>
+
+<script src="assets/js/script.js"></script>
+</body>
+</html>
